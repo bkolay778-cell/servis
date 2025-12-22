@@ -226,9 +226,30 @@ sts_faq_schema();
         </div>
         
         <div class="steps-grid">
-            <?php foreach ($steps as $step): ?>
-            <div class="step-card">
-                <div class="step-number"><?php echo esc_html($step['number']); ?></div>
+            <?php 
+            $step_images = array(
+                1 => 'https://images.unsplash.com/photo-1556745757-8d76bdb6984b?w=300&h=300&fit=crop&q=80',
+                2 => 'https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=300&h=300&fit=crop&q=80',
+                3 => 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=300&h=300&fit=crop&q=80',
+                4 => 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=300&h=300&fit=crop&q=80'
+            );
+            foreach ($steps as $index => $step): 
+            $step_num = intval($step['number']);
+            ?>
+            <div class="step-card" style="position: relative;">
+                <!-- Step Image -->
+                <div style="position: relative; width: 8rem; height: 8rem; margin: 0 auto 1rem; border-radius: 50%; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); border: 4px solid white;">
+                    <img src="<?php echo esc_url($step_images[$step_num]); ?>" 
+                         alt="<?php echo esc_attr($step['title']); ?>"
+                         style="width: 100%; height: 100%; object-fit: cover;">
+                    <div style="position: absolute; inset: 0; background: rgba(30,64,175,0.2);"></div>
+                </div>
+                
+                <!-- Step Number -->
+                <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%) translateY(-0.5rem); width: 2.5rem; height: 2.5rem; background: var(--primary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.125rem; font-weight: bold; box-shadow: 0 4px 15px rgba(30,64,175,0.3);">
+                    <?php echo esc_html($step['number']); ?>
+                </div>
+                
                 <h3><?php echo esc_html($step['title']); ?></h3>
                 <p><?php echo esc_html($step['description']); ?></p>
             </div>
