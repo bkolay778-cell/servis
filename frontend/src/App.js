@@ -16,52 +16,78 @@ const CONTACT = {
   businessName: "Sivas Teknik Servis Arıza Kayıt Merkezi",
 };
 
-// Services Data
+// Images - Professional Service Images
+const IMAGES = {
+  hero: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&h=600&fit=crop&q=80",
+  heroMobile: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&h=400&fit=crop&q=80",
+  technician1: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=400&fit=crop&q=80",
+  technician2: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop&q=80",
+  washingMachine: "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=600&h=400&fit=crop&q=80",
+  refrigerator: "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=600&h=400&fit=crop&q=80",
+  airConditioner: "https://images.unsplash.com/photo-1631545806609-12b5cb25d52b?w=600&h=400&fit=crop&q=80",
+  boiler: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&h=400&fit=crop&q=80",
+  smallAppliances: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop&q=80",
+  tv: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=600&h=400&fit=crop&q=80",
+  industrial: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=400&fit=crop&q=80",
+  customerService: "https://images.unsplash.com/photo-1556745757-8d76bdb6984b?w=600&h=400&fit=crop&q=80",
+  teamWork: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop&q=80",
+  tools: "https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=600&h=400&fit=crop&q=80",
+  support: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop&q=80",
+  sivas: "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?w=800&h=400&fit=crop&q=80",
+};
+
+// Services Data with Images
 const SERVICES = [
   {
     title: "Beyaz Eşya Arıza Kayıt",
     description: "Buzdolabı, çamaşır makinesi, bulaşık makinesi, kurutma makinesi arıza kayıt hizmeti.",
     icon: "🧊",
-    slug: "beyaz-esya"
+    slug: "beyaz-esya",
+    image: IMAGES.washingMachine
   },
   {
     title: "Kombi & Isıtma Sistemleri",
     description: "Kombi, kalorifer, kat kaloriferi ve tüm ısıtma sistemleri için arıza kayıt.",
     icon: "🔥",
-    slug: "kombi-isitma"
+    slug: "kombi-isitma",
+    image: IMAGES.boiler
   },
   {
     title: "Klima & Soğutma Sistemleri",
     description: "Split klima, salon tipi klima, VRF sistemler için arıza kayıt ve destek.",
     icon: "❄️",
-    slug: "klima-sogutma"
+    slug: "klima-sogutma",
+    image: IMAGES.airConditioner
   },
   {
     title: "Küçük Ev Aletleri",
     description: "Elektrikli süpürge, ütü, mikser, kahve makinesi ve diğer küçük ev aletleri.",
     icon: "🔌",
-    slug: "kucuk-ev-aletleri"
+    slug: "kucuk-ev-aletleri",
+    image: IMAGES.smallAppliances
   },
   {
     title: "Endüstriyel Cihazlar",
     description: "Endüstriyel mutfak ekipmanları, soğuk hava depoları, profesyonel cihazlar.",
     icon: "🏭",
-    slug: "endustriyel"
+    slug: "endustriyel",
+    image: IMAGES.industrial
   },
   {
     title: "Televizyon & Elektronik",
     description: "LED TV, Smart TV ve diğer elektronik cihazlar için arıza kayıt hizmeti.",
     icon: "📺",
-    slug: "tv-elektronik"
+    slug: "tv-elektronik",
+    image: IMAGES.tv
   }
 ];
 
 // Steps Data
 const STEPS = [
-  { number: "1", title: "Arıza Kaydı Alınır", description: "Telefon, WhatsApp veya web formumuz üzerinden arıza bilgilerinizi kayıt altına alıyoruz." },
-  { number: "2", title: "Teknik İhtiyaç Değerlendirilir", description: "Arıza türü ve cihaz bilgilerine göre teknik ihtiyaç analizi yapılır." },
-  { number: "3", title: "Uygun Servis Yönlendirilir", description: "Bölgenize ve arıza türüne uygun teknik servis ile koordinasyon sağlanır." },
-  { number: "4", title: "Destek Süreci Başlatılır", description: "Teknik destek süreci başlatılır ve süreç boyunca bilgilendirilirsiniz." }
+  { number: "1", title: "Arıza Kaydı Alınır", description: "Telefon, WhatsApp veya web formumuz üzerinden arıza bilgilerinizi kayıt altına alıyoruz.", image: IMAGES.customerService },
+  { number: "2", title: "Teknik İhtiyaç Değerlendirilir", description: "Arıza türü ve cihaz bilgilerine göre teknik ihtiyaç analizi yapılır.", image: IMAGES.tools },
+  { number: "3", title: "Uygun Servis Yönlendirilir", description: "Bölgenize ve arıza türüne uygun teknik servis ile koordinasyon sağlanır.", image: IMAGES.teamWork },
+  { number: "4", title: "Destek Süreci Başlatılır", description: "Teknik destek süreci başlatılır ve süreç boyunca bilgilendirilirsiniz.", image: IMAGES.support }
 ];
 
 // FAQ Data
@@ -220,17 +246,20 @@ const Header = () => {
   );
 };
 
-// Hero Section
+// Hero Section with Large Image
 const Hero = () => (
-  <section id="anasayfa" className="relative bg-gradient-to-br from-blue-800 to-blue-900 text-white py-16 lg:py-24 overflow-hidden">
-    {/* Background Pattern */}
-    <div className="absolute inset-0 opacity-10">
-      <div className="absolute top-10 left-10 w-32 h-32 border border-white rounded-full"></div>
-      <div className="absolute bottom-20 right-20 w-48 h-48 border border-white rounded-full"></div>
-      <div className="absolute top-1/2 left-1/3 w-24 h-24 border border-white rounded-full"></div>
+  <section id="anasayfa" className="relative bg-gradient-to-br from-blue-800 to-blue-900 text-white overflow-hidden">
+    {/* Background Image Overlay */}
+    <div className="absolute inset-0">
+      <img 
+        src={IMAGES.hero}
+        alt="Profesyonel teknik servis"
+        className="w-full h-full object-cover opacity-20"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-800/70"></div>
     </div>
     
-    <div className="container mx-auto px-4 relative z-10">
+    <div className="container mx-auto px-4 py-16 lg:py-24 relative z-10">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         {/* Content */}
         <div className="text-center lg:text-left">
@@ -249,12 +278,12 @@ const Hero = () => (
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <a href="#kayit" className="inline-flex items-center justify-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition shadow-lg">
+            <a href="#kayit" className="inline-flex items-center justify-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition shadow-lg text-lg">
               Arıza Kaydı Oluştur
             </a>
-            <a href={CONTACT.phoneLink} className="inline-flex items-center justify-center gap-2 bg-white/10 border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition">
+            <a href={CONTACT.phoneLink} className="inline-flex items-center justify-center gap-2 bg-white/10 border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition text-lg">
               <PhoneIcon />
-              Hemen Ara: {CONTACT.phone}
+              {CONTACT.phone}
             </a>
           </div>
           
@@ -275,15 +304,34 @@ const Hero = () => (
           </div>
         </div>
         
-        {/* Image */}
+        {/* Hero Image */}
         <div className="hidden lg:block">
-          <img 
-            src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&h=600&fit=crop&q=80" 
-            alt="Profesyonel teknik servis ekibi"
-            className="rounded-xl shadow-2xl animate-float"
-            width="800"
-            height="600"
-          />
+          <div className="relative">
+            <img 
+              src={IMAGES.technician1}
+              alt="Profesyonel teknik servis ekibi"
+              className="rounded-2xl shadow-2xl w-full h-[500px] object-cover"
+            />
+            {/* Floating Card */}
+            <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                  <span className="text-2xl">✓</span>
+                </div>
+                <div>
+                  <div className="font-bold text-gray-900">Hızlı Kayıt</div>
+                  <div className="text-sm text-gray-500">Anında destek başlasın</div>
+                </div>
+              </div>
+            </div>
+            {/* Second Floating Card */}
+            <div className="absolute -top-4 -right-4 bg-blue-800 text-white p-4 rounded-xl shadow-xl">
+              <div className="text-center">
+                <div className="text-2xl font-bold">7/24</div>
+                <div className="text-xs opacity-80">Arıza Hattı</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -299,7 +347,7 @@ const DisclaimerBox = ({ text, className = "" }) => (
   </div>
 );
 
-// Services Section
+// Services Section with Images
 const Services = () => (
   <section id="hizmetler" className="py-16 bg-gray-50">
     <div className="container mx-auto px-4">
@@ -308,17 +356,29 @@ const Services = () => (
         <p className="text-gray-600 max-w-2xl mx-auto">Tüm ev aletleriniz için hızlı ve güvenilir arıza kayıt hizmeti</p>
       </div>
       
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {SERVICES.map((service, index) => (
-          <div key={index} className="bg-white rounded-xl p-6 shadow-md border border-gray-200 hover:shadow-lg hover:border-blue-300 transition group">
-            <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:bg-blue-800 group-hover:scale-110 transition">
-              <span className="group-hover:grayscale group-hover:brightness-200">{service.icon}</span>
+          <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl hover:border-blue-300 transition group">
+            {/* Service Image */}
+            <div className="relative h-48 overflow-hidden">
+              <img 
+                src={service.image} 
+                alt={service.title}
+                className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+              <div className="absolute bottom-4 left-4">
+                <span className="text-4xl">{service.icon}</span>
+              </div>
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
-            <p className="text-gray-600 mb-4">{service.description}</p>
-            <a href={`#kayit?hizmet=${service.slug}`} className="inline-block w-full text-center bg-blue-800 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-900 transition">
-              Arıza Kaydı Oluştur
-            </a>
+            
+            <div className="p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
+              <p className="text-gray-600 mb-4">{service.description}</p>
+              <a href={`#kayit?hizmet=${service.slug}`} className="inline-block w-full text-center bg-blue-800 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-900 transition">
+                Arıza Kaydı Oluştur
+              </a>
+            </div>
           </div>
         ))}
       </div>
@@ -326,36 +386,57 @@ const Services = () => (
   </section>
 );
 
-// Features Section
+// Features Section with Image
 const Features = () => (
   <section className="py-16">
     <div className="container mx-auto px-4">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">Neden Bizi Tercih Etmelisiniz?</h2>
-        <p className="text-gray-600">Sivas ve çevresinde güvenilir arıza kayıt hizmeti</p>
-      </div>
-      
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {[
-          { icon: "⏰", title: "7/24 Arıza Hattı", desc: "Haftanın her günü arıza kaydınızı oluşturabilirsiniz." },
-          { icon: "✅", title: "Hızlı Geri Dönüş", desc: "Kayıt sonrası en kısa sürede sizinle iletişime geçiyoruz." },
-          { icon: "📍", title: "Sivas Geneli Hizmet", desc: "Tüm ilçe ve mahallelerde arıza kayıt hizmeti sunuyoruz." },
-          { icon: "🔒", title: "Güvenilir Hizmet", desc: "Yılların deneyimiyle güvenilir arıza kayıt organizasyonu." }
-        ].map((feature, index) => (
-          <div key={index} className="text-center p-6">
-            <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center text-4xl mx-auto mb-4">
-              {feature.icon}
-            </div>
-            <h3 className="font-semibold text-gray-900 mb-2">{feature.title}</h3>
-            <p className="text-gray-600 text-sm">{feature.desc}</p>
+      <div className="grid lg:grid-cols-2 gap-12 items-center">
+        {/* Image Side */}
+        <div className="relative">
+          <img 
+            src={IMAGES.technician2}
+            alt="Profesyonel teknik destek"
+            className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
+          />
+          <div className="absolute -bottom-6 -right-6 bg-green-600 text-white p-6 rounded-xl shadow-xl hidden md:block">
+            <div className="text-3xl font-bold">%98</div>
+            <div className="text-sm">Müşteri Memnuniyeti</div>
           </div>
-        ))}
+        </div>
+        
+        {/* Content Side */}
+        <div>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Neden Bizi Tercih Etmelisiniz?</h2>
+          <p className="text-gray-600 mb-8">
+            Sivas ve çevresinde yılların deneyimiyle güvenilir arıza kayıt hizmeti sunuyoruz. 
+            Profesyonel ekibimiz ve geniş servis ağımızla her zaman yanınızdayız.
+          </p>
+          
+          <div className="space-y-6">
+            {[
+              { icon: "⏰", title: "7/24 Arıza Hattı", desc: "Haftanın her günü arıza kaydınızı oluşturabilirsiniz." },
+              { icon: "✅", title: "Hızlı Geri Dönüş", desc: "Kayıt sonrası en kısa sürede sizinle iletişime geçiyoruz." },
+              { icon: "📍", title: "Sivas Geneli Hizmet", desc: "Tüm ilçe ve mahallelerde arıza kayıt hizmeti sunuyoruz." },
+              { icon: "🔒", title: "Güvenilir Hizmet", desc: "Yılların deneyimiyle güvenilir arıza kayıt organizasyonu." }
+            ].map((feature, index) => (
+              <div key={index} className="flex items-start gap-4">
+                <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
+                  {feature.icon}
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-1">{feature.title}</h3>
+                  <p className="text-gray-600 text-sm">{feature.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   </section>
 );
 
-// How It Works Section
+// How It Works Section with Images
 const HowItWorks = () => (
   <section className="py-16 bg-blue-50">
     <div className="container mx-auto px-4">
@@ -366,10 +447,22 @@ const HowItWorks = () => (
       
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {STEPS.map((step, index) => (
-          <div key={index} className="text-center relative">
-            <div className="w-16 h-16 bg-blue-800 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+          <div key={index} className="text-center relative group">
+            {/* Step Image */}
+            <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden shadow-lg border-4 border-white">
+              <img 
+                src={step.image}
+                alt={step.title}
+                className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+              />
+              <div className="absolute inset-0 bg-blue-800/20 group-hover:bg-blue-800/10 transition"></div>
+            </div>
+            
+            {/* Step Number */}
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-10 h-10 bg-blue-800 text-white rounded-full flex items-center justify-center text-lg font-bold shadow-lg">
               {step.number}
             </div>
+            
             <h3 className="font-semibold text-gray-900 mb-2">{step.title}</h3>
             <p className="text-gray-600 text-sm">{step.description}</p>
           </div>
@@ -379,19 +472,29 @@ const HowItWorks = () => (
   </section>
 );
 
-// CTA Section
+// CTA Section with Background Image
 const CTASection = () => (
-  <section className="py-16 bg-gradient-to-r from-blue-800 to-blue-900 text-white">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">Arıza Kaydınızı Hemen Oluşturun</h2>
-      <p className="opacity-90 mb-8 max-w-2xl mx-auto">
+  <section className="relative py-20">
+    {/* Background Image */}
+    <div className="absolute inset-0">
+      <img 
+        src={IMAGES.tools}
+        alt="Teknik servis araçları"
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/95 to-blue-800/90"></div>
+    </div>
+    
+    <div className="container mx-auto px-4 relative z-10 text-center text-white">
+      <h2 className="text-3xl lg:text-4xl font-bold mb-4">Arıza Kaydınızı Hemen Oluşturun</h2>
+      <p className="opacity-90 mb-8 max-w-2xl mx-auto text-lg">
         Cihazınızda bir arıza mı var? Hemen arıza kaydı oluşturun, teknik destek sürecinizi başlatalım.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#kayit" className="inline-flex items-center justify-center gap-2 bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition text-lg">
+        <a href="#kayit" className="inline-flex items-center justify-center gap-2 bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition text-lg shadow-xl">
           Arıza Kaydı Oluştur
         </a>
-        <a href={CONTACT.whatsappLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition text-lg">
+        <a href={CONTACT.whatsappLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition text-lg shadow-xl">
           <WhatsAppIcon />
           WhatsApp ile Ulaşın
         </a>
@@ -400,7 +503,7 @@ const CTASection = () => (
   </section>
 );
 
-// Regions Section
+// Regions Section with Background
 const Regions = () => (
   <section id="bolgeler" className="py-16 bg-gray-50">
     <div className="container mx-auto px-4">
@@ -409,10 +512,25 @@ const Regions = () => (
         <p className="text-gray-600">Sivas ili ve tüm ilçelerinde arıza kayıt hizmeti</p>
       </div>
       
+      {/* Sivas Image Banner */}
+      <div className="relative rounded-2xl overflow-hidden mb-8 h-48">
+        <img 
+          src={IMAGES.sivas}
+          alt="Sivas"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/60 flex items-center justify-center">
+          <div className="text-center text-white">
+            <h3 className="text-2xl lg:text-3xl font-bold mb-2">Sivas ve Tüm İlçelerinde</h3>
+            <p className="opacity-90">Profesyonel Arıza Kayıt Hizmeti</p>
+          </div>
+        </div>
+      </div>
+      
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {REGIONS.map((region, index) => (
-          <a key={index} href={`#bolge-${region.slug}`} className="bg-white p-4 rounded-lg shadow-sm border border-gray-200 hover:shadow-md hover:border-blue-300 transition flex items-center gap-3">
-            <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-800">
+          <a key={index} href={`#bolge-${region.slug}`} className="bg-white p-4 rounded-xl shadow-md border border-gray-200 hover:shadow-lg hover:border-blue-300 transition flex items-center gap-3 group">
+            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-800 group-hover:bg-blue-800 group-hover:text-white transition">
               <LocationIcon />
             </div>
             <div>
@@ -438,37 +556,57 @@ const FAQ = () => {
   return (
     <section id="sss" className="py-16">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Sıkça Sorulan Sorular</h2>
-          <p className="text-gray-600">Merak ettiğiniz soruların cevapları</p>
-        </div>
-        
-        <div className="max-w-3xl mx-auto space-y-4">
-          {FAQS.map((faq, index) => (
-            <div key={index} className={`bg-white border rounded-lg overflow-hidden ${activeIndex === index ? 'border-blue-300 shadow-md' : 'border-gray-200'}`}>
-              <button 
-                onClick={() => setActiveIndex(activeIndex === index ? -1 : index)}
-                className={`w-full flex justify-between items-center p-4 text-left font-semibold transition ${activeIndex === index ? 'bg-blue-50 text-blue-800' : 'text-gray-800 hover:bg-gray-50'}`}
-              >
-                <span>{faq.question}</span>
-                <span className={`transform transition ${activeIndex === index ? 'rotate-180' : ''}`}>
-                  <ChevronDownIcon />
-                </span>
-              </button>
-              {activeIndex === index && (
-                <div className="p-4 text-gray-600 border-t">
-                  {faq.answer}
-                </div>
-              )}
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          {/* Image Side */}
+          <div className="hidden lg:block sticky top-32">
+            <img 
+              src={IMAGES.customerService}
+              alt="Müşteri hizmetleri"
+              className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
+            />
+            <div className="bg-blue-800 text-white p-6 rounded-xl mt-6">
+              <h3 className="font-bold text-xl mb-2">Sorularınız mı var?</h3>
+              <p className="opacity-90 mb-4">Hemen bizi arayın, size yardımcı olalım.</p>
+              <a href={CONTACT.phoneLink} className="inline-flex items-center gap-2 bg-white text-blue-800 px-4 py-2 rounded-lg font-semibold">
+                <PhoneIcon />
+                {CONTACT.phone}
+              </a>
             </div>
-          ))}
+          </div>
+          
+          {/* FAQ Content */}
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Sıkça Sorulan Sorular</h2>
+            <p className="text-gray-600 mb-8">Merak ettiğiniz soruların cevapları</p>
+            
+            <div className="space-y-4">
+              {FAQS.map((faq, index) => (
+                <div key={index} className={`bg-white border rounded-xl overflow-hidden ${activeIndex === index ? 'border-blue-300 shadow-lg' : 'border-gray-200'}`}>
+                  <button 
+                    onClick={() => setActiveIndex(activeIndex === index ? -1 : index)}
+                    className={`w-full flex justify-between items-center p-5 text-left font-semibold transition ${activeIndex === index ? 'bg-blue-50 text-blue-800' : 'text-gray-800 hover:bg-gray-50'}`}
+                  >
+                    <span>{faq.question}</span>
+                    <span className={`transform transition ${activeIndex === index ? 'rotate-180' : ''}`}>
+                      <ChevronDownIcon />
+                    </span>
+                  </button>
+                  {activeIndex === index && (
+                    <div className="p-5 pt-0 text-gray-600 border-t">
+                      {faq.answer}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
-// Contact Section
+// Contact Section with Image
 const Contact = () => (
   <section id="iletisim" className="py-16 bg-gray-50">
     <div className="container mx-auto px-4">
@@ -477,60 +615,77 @@ const Contact = () => (
         <p className="text-gray-600">Arıza kaydı oluşturmak veya bilgi almak için bizimle iletişime geçebilirsiniz.</p>
       </div>
       
-      <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-        {/* Contact Info */}
-        <div className="space-y-4">
-          {[
-            { icon: <PhoneIcon />, title: "Arıza Hattı", value: CONTACT.phone, link: CONTACT.phoneLink },
-            { icon: <PhoneIcon />, title: "Sabit Hat", value: CONTACT.landline, link: CONTACT.landlineLink },
-            { icon: <WhatsAppIcon />, title: "WhatsApp", value: CONTACT.whatsapp, link: CONTACT.whatsappLink, external: true },
-            { icon: <EmailIcon />, title: "E-posta", value: CONTACT.email, link: `mailto:${CONTACT.email}` },
-            { icon: <ClockIcon />, title: "Çalışma Saatleri", value: CONTACT.hoursWeekday }
-          ].map((item, index) => (
-            <div key={index} className="bg-white p-4 rounded-lg shadow-sm flex items-center gap-4">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-800">
-                {item.icon}
-              </div>
-              <div>
-                <div className="text-sm text-gray-500">{item.title}</div>
-                {item.link ? (
-                  <a href={item.link} target={item.external ? "_blank" : undefined} rel={item.external ? "noopener noreferrer" : undefined} className="font-semibold text-blue-800 hover:underline">
-                    {item.value}
-                  </a>
-                ) : (
-                  <div className="font-semibold text-gray-900">{item.value}</div>
-                )}
+      <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        {/* Contact Info with Image */}
+        <div>
+          {/* Team Image */}
+          <div className="relative rounded-2xl overflow-hidden mb-6 h-64">
+            <img 
+              src={IMAGES.support}
+              alt="Destek ekibi"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent flex items-end">
+              <div className="p-6 text-white">
+                <h3 className="text-xl font-bold mb-1">Profesyonel Destek Ekibi</h3>
+                <p className="opacity-90 text-sm">Size yardımcı olmak için buradayız</p>
               </div>
             </div>
-          ))}
+          </div>
           
-          <div className="bg-white p-4 rounded-lg shadow-sm">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-800">
-                <LocationIcon />
+          <div className="space-y-4">
+            {[
+              { icon: <PhoneIcon />, title: "Arıza Hattı", value: CONTACT.phone, link: CONTACT.phoneLink, bg: "bg-blue-100" },
+              { icon: <WhatsAppIcon />, title: "WhatsApp", value: CONTACT.whatsapp, link: CONTACT.whatsappLink, external: true, bg: "bg-green-100" },
+              { icon: <PhoneIcon />, title: "Sabit Hat", value: CONTACT.landline, link: CONTACT.landlineLink, bg: "bg-gray-100" },
+              { icon: <EmailIcon />, title: "E-posta", value: CONTACT.email, link: `mailto:${CONTACT.email}`, bg: "bg-gray-100" },
+              { icon: <ClockIcon />, title: "Çalışma Saatleri", value: CONTACT.hoursWeekday, bg: "bg-gray-100" }
+            ].map((item, index) => (
+              <div key={index} className="bg-white p-4 rounded-xl shadow-md flex items-center gap-4">
+                <div className={`w-12 h-12 ${item.bg} rounded-xl flex items-center justify-center text-blue-800`}>
+                  {item.icon}
+                </div>
+                <div>
+                  <div className="text-sm text-gray-500">{item.title}</div>
+                  {item.link ? (
+                    <a href={item.link} target={item.external ? "_blank" : undefined} rel={item.external ? "noopener noreferrer" : undefined} className="font-semibold text-blue-800 hover:underline">
+                      {item.value}
+                    </a>
+                  ) : (
+                    <div className="font-semibold text-gray-900">{item.value}</div>
+                  )}
+                </div>
               </div>
-              <div>
-                <div className="text-sm text-gray-500">Adres</div>
-                <div className="font-semibold text-gray-900">{CONTACT.address}</div>
-              </div>
-            </div>
+            ))}
           </div>
           
           <DisclaimerBox className="mt-6" />
         </div>
         
         {/* Map */}
-        <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3073.8654892838447!2d37.01525!3d39.74775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sMehmet%20Pa%C5%9Fa%20Mah.%2014-19%20Sokak%20No%3A2%2FA%20Sivas!5e0!3m2!1str!2str!4v1234567890"
-            width="100%"
-            height="400"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Sivas Teknik Servis Arıza Kayıt Merkezi Konum"
-          />
+        <div>
+          <div className="bg-white p-4 rounded-xl shadow-md flex items-start gap-4 mb-4">
+            <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-800">
+              <LocationIcon />
+            </div>
+            <div>
+              <div className="text-sm text-gray-500">Adres</div>
+              <div className="font-semibold text-gray-900">{CONTACT.address}</div>
+            </div>
+          </div>
+          
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3073.8654892838447!2d37.01525!3d39.74775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sMehmet%20Pa%C5%9Fa%20Mah.%2014-19%20Sokak%20No%3A2%2FA%20Sivas!5e0!3m2!1str!2str!4v1234567890"
+              width="100%"
+              height="350"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Sivas Teknik Servis Arıza Kayıt Merkezi Konum"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -553,6 +708,12 @@ const Footer = () => (
           <p className="text-sm mb-4">
             Arıza kayıt alma ve teknik destek organizasyon merkezi. Beyaz eşya, kombi, klima ve tüm ev aletleriniz için 7/24 arıza kayıt hizmeti.
           </p>
+          {/* Small Team Image */}
+          <img 
+            src={IMAGES.teamWork}
+            alt="Ekibimiz"
+            className="rounded-lg w-full h-24 object-cover opacity-70"
+          />
         </div>
         
         {/* Quick Links */}
@@ -604,7 +765,7 @@ const Footer = () => (
       </div>
       
       {/* Disclaimer */}
-      <div className="bg-gray-800 rounded-lg p-4 mt-8 text-sm text-center">
+      <div className="bg-gray-800 rounded-xl p-4 mt-8 text-sm text-center">
         <p>
           <strong>Önemli Bilgilendirme:</strong> Hizmetimiz arıza kayıt alma ve teknik destek organizasyonudur. 
           Herhangi bir markanın yetkili servisi veya resmi temsilcisi değiliz. 
@@ -650,7 +811,7 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <div className="container mx-auto px-4 -mt-6 relative z-10">
+        <div className="container mx-auto px-4 py-6">
           <DisclaimerBox />
         </div>
         <Services />
