@@ -22,8 +22,16 @@ sts_faq_schema();
 ?>
 
 <!-- Hero Section -->
-<section class="hero">
-    <div class="container">
+<section class="hero" style="position: relative; overflow: hidden;">
+    <!-- Background Image -->
+    <div style="position: absolute; inset: 0; z-index: 0;">
+        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1920&h=1080&fit=crop&q=80" 
+             alt="Profesyonel teknik servis"
+             style="width: 100%; height: 100%; object-fit: cover; opacity: 0.2;">
+        <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(30,58,138,0.9), rgba(30,64,175,0.7));"></div>
+    </div>
+    
+    <div class="container" style="position: relative; z-index: 1;">
         <div class="hero-inner">
             <div class="hero-content">
                 <div class="hero-badge">
@@ -65,11 +73,29 @@ sts_faq_schema();
             </div>
             
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&h=600&fit=crop&q=80" 
-                     alt="Profesyonel teknik servis ekibi" 
-                     width="800" 
-                     height="600"
-                     loading="eager">
+                <div style="position: relative;">
+                    <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&h=500&fit=crop&q=80" 
+                         alt="Profesyonel teknik servis ekibi" 
+                         width="800" 
+                         height="500"
+                         loading="eager"
+                         style="border-radius: 1rem; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);">
+                    <!-- Floating Card -->
+                    <div style="position: absolute; bottom: -1.5rem; left: -1.5rem; background: white; padding: 1rem; border-radius: 0.75rem; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.3);">
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <div style="width: 3rem; height: 3rem; background: #dcfce7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">✓</div>
+                            <div>
+                                <div style="font-weight: bold; color: #1e293b;">Hızlı Kayıt</div>
+                                <div style="font-size: 0.875rem; color: #64748b;">Anında destek başlasın</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Second Card -->
+                    <div style="position: absolute; top: -1rem; right: -1rem; background: #1e40af; color: white; padding: 1rem; border-radius: 0.75rem; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.3); text-align: center;">
+                        <div style="font-size: 1.5rem; font-weight: bold;">7/24</div>
+                        <div style="font-size: 0.75rem; opacity: 0.8;">Arıza Hattı</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
