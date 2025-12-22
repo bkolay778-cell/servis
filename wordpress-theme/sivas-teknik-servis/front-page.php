@@ -296,6 +296,19 @@ sts_faq_schema();
             <p>Sivas ili ve tüm ilçelerinde arıza kayıt hizmeti</p>
         </div>
         
+        <!-- Sivas Banner Image -->
+        <div style="position: relative; border-radius: 1rem; overflow: hidden; margin-bottom: 2rem; height: 200px;">
+            <img src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3?w=1200&h=400&fit=crop&q=80" 
+                 alt="Sivas"
+                 style="width: 100%; height: 100%; object-fit: cover;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(30,58,138,0.8), rgba(30,64,175,0.6)); display: flex; align-items: center; justify-content: center;">
+                <div style="text-align: center; color: white;">
+                    <h3 style="color: white; font-size: 1.75rem; margin-bottom: 0.5rem;">Sivas ve Tüm İlçelerinde</h3>
+                    <p style="opacity: 0.9;">Profesyonel Arıza Kayıt Hizmeti</p>
+                </div>
+            </div>
+        </div>
+        
         <div class="region-grid">
             <?php 
             $regions = sts_get_regions();
