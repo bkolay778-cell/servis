@@ -120,8 +120,27 @@ sts_faq_schema();
         </div>
         
         <div class="services-grid">
-            <?php foreach ($services as $service): ?>
-            <div class="service-card">
+            <?php 
+            $service_images = array(
+                'beyaz-esya' => 'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=600&h=400&fit=crop&q=80',
+                'kombi-isitma' => 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&h=400&fit=crop&q=80',
+                'klima-sogutma' => 'https://images.unsplash.com/photo-1631545806609-12b5cb25d52b?w=600&h=400&fit=crop&q=80',
+                'kucuk-ev-aletleri' => 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop&q=80',
+                'endustriyel' => 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=400&fit=crop&q=80',
+                'tv-elektronik' => 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=600&h=400&fit=crop&q=80'
+            );
+            foreach ($services as $service): 
+            $image_url = isset($service_images[$service['slug']]) ? $service_images[$service['slug']] : '';
+            ?>
+            <div class="service-card" style="overflow: hidden;">
+                <?php if ($image_url): ?>
+                <div style="position: relative; height: 180px; overflow: hidden; margin: -1.5rem -1.5rem 1rem -1.5rem;">
+                    <img src="<?php echo esc_url($image_url); ?>" 
+                         alt="<?php echo esc_attr($service['title']); ?>"
+                         style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);"></div>
+                </div>
+                <?php endif; ?>
                 <div class="service-icon">
                     <?php echo sts_get_icon($service['icon']); ?>
                 </div>
