@@ -358,6 +358,19 @@ sts_faq_schema();
     <div class="container">
         <div class="contact-grid">
             <div>
+                <!-- Team Image -->
+                <div style="position: relative; border-radius: 1rem; overflow: hidden; margin-bottom: 1.5rem; height: 200px;">
+                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=300&fit=crop&q=80" 
+                         alt="Destek ekibi"
+                         style="width: 100%; height: 100%; object-fit: cover;">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(30,58,138,0.8), transparent); display: flex; align-items: flex-end;">
+                        <div style="padding: 1.5rem; color: white;">
+                            <h3 style="color: white; margin-bottom: 0.25rem;">Profesyonel Destek Ekibi</h3>
+                            <p style="opacity: 0.9; font-size: 0.875rem; margin: 0;">Size yardımcı olmak için buradayız</p>
+                        </div>
+                    </div>
+                </div>
+                
                 <h2>Bize Ulaşın</h2>
                 <p style="color: var(--gray-600); margin-bottom: 2rem;">
                     Arıza kaydı oluşturmak veya bilgi almak için bizimle iletişime geçebilirsiniz.
@@ -375,7 +388,7 @@ sts_faq_schema();
                     </div>
                     
                     <div class="contact-info-card">
-                        <div class="contact-info-icon">
+                        <div class="contact-info-icon" style="background: #dcfce7;">
                             <?php echo sts_get_icon('whatsapp'); ?>
                         </div>
                         <div class="contact-info-content">
