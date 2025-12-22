@@ -158,51 +158,60 @@ sts_faq_schema();
 <!-- Features Section -->
 <section class="section">
     <div class="container">
-        <div class="section-header">
-            <h2>Neden Bizi Tercih Etmelisiniz?</h2>
-            <p>Sivas ve çevresinde güvenilir arıza kayıt hizmeti</p>
-        </div>
-        
-        <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
-            <div class="feature-card" style="text-align: center; padding: 2rem;">
-                <div style="width: 80px; height: 80px; background: var(--primary-lighter); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
-                    <svg width="40" height="40" fill="none" stroke="var(--primary-color)" stroke-width="2" viewBox="0 0 24 24">
-                        <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
+        <div style="display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center;">
+            <?php /* Desktop: 2 columns */ ?>
+            <style>
+                @media (min-width: 1024px) {
+                    .features-layout { grid-template-columns: 1fr 1fr !important; }
+                }
+            </style>
+            <div class="features-layout" style="display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center;">
+                <!-- Image Side -->
+                <div style="position: relative;">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop&q=80" 
+                         alt="Profesyonel teknik destek"
+                         style="border-radius: 1rem; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15); width: 100%; height: 400px; object-fit: cover;">
+                    <div style="position: absolute; bottom: -1.5rem; right: -1.5rem; background: #16a34a; color: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.3); display: none;" class="feature-stat-box">
+                        <div style="font-size: 2rem; font-weight: bold;">%98</div>
+                        <div style="font-size: 0.875rem;">Müşteri Memnuniyeti</div>
+                    </div>
+                    <style>
+                        @media (min-width: 768px) {
+                            .feature-stat-box { display: block !important; }
+                        }
+                    </style>
                 </div>
-                <h3 style="margin-bottom: 0.5rem;">7/24 Arıza Hattı</h3>
-                <p style="color: var(--gray-600);">Haftanın her günü arıza kaydınızı oluşturabilirsiniz.</p>
-            </div>
-            
-            <div class="feature-card" style="text-align: center; padding: 2rem;">
-                <div style="width: 80px; height: 80px; background: var(--primary-lighter); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
-                    <svg width="40" height="40" fill="none" stroke="var(--primary-color)" stroke-width="2" viewBox="0 0 24 24">
-                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
+                
+                <!-- Content Side -->
+                <div>
+                    <h2 style="margin-bottom: 1.5rem;">Neden Bizi Tercih Etmelisiniz?</h2>
+                    <p style="color: var(--gray-600); margin-bottom: 2rem;">
+                        Sivas ve çevresinde yılların deneyimiyle güvenilir arıza kayıt hizmeti sunuyoruz. 
+                        Profesyonel ekibimiz ve geniş servis ağımızla her zaman yanınızdayız.
+                    </p>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <?php
+                        $features = array(
+                            array('icon' => '⏰', 'title' => '7/24 Arıza Hattı', 'desc' => 'Haftanın her günü arıza kaydınızı oluşturabilirsiniz.'),
+                            array('icon' => '✅', 'title' => 'Hızlı Geri Dönüş', 'desc' => 'Kayıt sonrası en kısa sürede sizinle iletişime geçiyoruz.'),
+                            array('icon' => '📍', 'title' => 'Sivas Geneli Hizmet', 'desc' => 'Tüm ilçe ve mahallelerde arıza kayıt hizmeti sunuyoruz.'),
+                            array('icon' => '🔒', 'title' => 'Güvenilir Hizmet', 'desc' => 'Yılların deneyimiyle güvenilir arıza kayıt organizasyonu.')
+                        );
+                        foreach ($features as $feature):
+                        ?>
+                        <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                            <div style="width: 3.5rem; height: 3.5rem; background: var(--primary-lighter); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+                                <?php echo $feature['icon']; ?>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 1.125rem; margin-bottom: 0.25rem;"><?php echo esc_html($feature['title']); ?></h3>
+                                <p style="color: var(--gray-600); font-size: 0.9375rem; margin: 0;"><?php echo esc_html($feature['desc']); ?></p>
+                            </div>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
-                <h3 style="margin-bottom: 0.5rem;">Hızlı Geri Dönüş</h3>
-                <p style="color: var(--gray-600);">Kayıt sonrası en kısa sürede sizinle iletişime geçiyoruz.</p>
-            </div>
-            
-            <div class="feature-card" style="text-align: center; padding: 2rem;">
-                <div style="width: 80px; height: 80px; background: var(--primary-lighter); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
-                    <svg width="40" height="40" fill="none" stroke="var(--primary-color)" stroke-width="2" viewBox="0 0 24 24">
-                        <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                        <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                    </svg>
-                </div>
-                <h3 style="margin-bottom: 0.5rem;">Sivas Geneli Hizmet</h3>
-                <p style="color: var(--gray-600);">Tüm ilçe ve mahallelerde arıza kayıt hizmeti sunuyoruz.</p>
-            </div>
-            
-            <div class="feature-card" style="text-align: center; padding: 2rem;">
-                <div style="width: 80px; height: 80px; background: var(--primary-lighter); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
-                    <svg width="40" height="40" fill="none" stroke="var(--primary-color)" stroke-width="2" viewBox="0 0 24 24">
-                        <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-                    </svg>
-                </div>
-                <h3 style="margin-bottom: 0.5rem;">Güvenilir Hizmet</h3>
-                <p style="color: var(--gray-600);">Yılların deneyimiyle güvenilir arıza kayıt organizasyonu.</p>
             </div>
         </div>
     </div>
