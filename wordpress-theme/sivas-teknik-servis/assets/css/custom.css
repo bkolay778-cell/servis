@@ -1,0 +1,474 @@
+/**
+ * Sivas Teknik Servis - Additional Custom Styles
+ * 
+ * @package SivasTeknikServis
+ */
+
+/* ========================================
+   ADDITIONAL MOBILE STYLES
+======================================== */
+.mobile-navigation {
+    background: var(--white);
+    border-top: 1px solid var(--gray-200);
+    padding: var(--spacing-md) 0;
+}
+
+.mobile-navigation ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-navigation a {
+    display: block;
+    padding: var(--spacing-md) 0;
+    color: var(--gray-700);
+    font-weight: 500;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.mobile-navigation a:hover {
+    color: var(--primary-color);
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ========================================
+   ENHANCED HERO SECTION
+======================================== */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.hero-image img {
+    animation: float 6s ease-in-out infinite;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom right, transparent 49%, var(--white) 50%);
+    z-index: 2;
+}
+
+/* ========================================
+   SERVICE CARD ENHANCEMENTS
+======================================== */
+.service-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: var(--primary-color);
+    transition: height var(--transition-normal);
+}
+
+.service-card:hover::before {
+    height: 100%;
+}
+
+.service-icon {
+    transition: all var(--transition-normal);
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+    background: var(--primary-color);
+}
+
+.service-card:hover .service-icon svg {
+    color: var(--white);
+}
+
+/* ========================================
+   STEP CARD CONNECTOR LINES
+======================================== */
+@media (min-width: 768px) {
+    .steps-grid {
+        position: relative;
+    }
+    
+    .step-card:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 30px;
+        right: -50%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(to right, var(--primary-color), var(--primary-lighter));
+        z-index: 0;
+    }
+    
+    .step-card {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+/* ========================================
+   FAQ ANIMATIONS
+======================================== */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-normal), padding var(--transition-normal);
+    padding: 0 var(--spacing-lg);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 0 var(--spacing-lg) var(--spacing-lg);
+    display: block;
+}
+
+.faq-question {
+    transition: background var(--transition-fast);
+}
+
+.faq-item.active .faq-question {
+    background: var(--primary-lighter);
+    color: var(--primary-dark);
+}
+
+/* ========================================
+   CONTACT INFO CARDS
+======================================== */
+.contact-info-card {
+    transition: all var(--transition-fast);
+}
+
+.contact-info-card:hover {
+    transform: translateX(5px);
+    border-left: 3px solid var(--primary-color);
+}
+
+/* ========================================
+   REGION CARDS
+======================================== */
+.region-card {
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.region-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--primary-lighter) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.region-card:hover::before {
+    opacity: 1;
+}
+
+.region-card:hover {
+    transform: translateY(-3px);
+}
+
+/* ========================================
+   BUTTON ANIMATIONS
+======================================== */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-cta {
+    box-shadow: 0 4px 15px rgba(22, 163, 74, 0.3);
+}
+
+.btn-cta:hover {
+    box-shadow: 0 6px 20px rgba(22, 163, 74, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    box-shadow: 0 4px 15px rgba(30, 64, 175, 0.3);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 6px 20px rgba(30, 64, 175, 0.4);
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   FIXED BUTTONS ANIMATION
+======================================== */
+.fixed-buttons {
+    transform: translateY(100%);
+    animation: slideUp 0.5s ease forwards;
+    animation-delay: 1s;
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+    }
+}
+
+.fixed-btn {
+    transition: all var(--transition-fast);
+}
+
+.fixed-btn:active {
+    transform: scale(0.98);
+}
+
+/* ========================================
+   LOADING STATES
+======================================== */
+.btn.loading {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.btn.loading::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid transparent;
+    border-top-color: currentColor;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-right: 8px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ========================================
+   FORM ENHANCEMENTS
+======================================== */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    transform: translateY(-1px);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--gray-400);
+}
+
+/* Success/Error States */
+.form-group.success input,
+.form-group.success select,
+.form-group.success textarea {
+    border-color: var(--cta-green);
+    background: #f0fdf4;
+}
+
+.form-group.error input,
+.form-group.error select,
+.form-group.error textarea {
+    border-color: #ef4444;
+    background: #fef2f2;
+}
+
+/* ========================================
+   SCROLL TO TOP BUTTON
+======================================== */
+.scroll-to-top {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-normal);
+    z-index: 998;
+    box-shadow: var(--shadow-lg);
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+/* ========================================
+   ACCESSIBILITY IMPROVEMENTS
+======================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .hero-image img {
+        animation: none;
+    }
+}
+
+/* Focus Styles */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Skip Link */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 2rem;
+    z-index: 9999;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* ========================================
+   DARK MODE SUPPORT (Optional)
+======================================== */
+@media (prefers-color-scheme: dark) {
+    /* Uncomment below for dark mode support */
+    /*
+    :root {
+        --white: #1a1a2e;
+        --gray-100: #16213e;
+        --gray-200: #1f2b47;
+        --gray-300: #2a3a5a;
+        --gray-400: #7f8c9b;
+        --gray-500: #9aa5b4;
+        --gray-600: #b8c1cc;
+        --gray-700: #d1d9e0;
+        --gray-800: #e8ecf1;
+        --gray-900: #f5f7fa;
+    }
+    */
+}
+
+/* ========================================
+   PRINT STYLES ENHANCEMENT
+======================================== */
+@media print {
+    .hero,
+    .fixed-buttons,
+    .scroll-to-top {
+        display: none !important;
+    }
+    
+    .disclaimer-box {
+        border: 1px solid #000;
+        background: #f5f5f5 !important;
+    }
+    
+    a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+    }
+}
+
+/* ========================================
+   EXTRA SMALL DEVICES
+======================================== */
+@media (max-width: 374px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .btn-lg {
+        padding: 0.75rem 1.25rem;
+        font-size: 1rem;
+    }
+    
+    .fixed-btn span {
+        font-size: 0.8125rem;
+    }
+}
+
+/* ========================================
+   HIGH CONTRAST MODE
+======================================== */
+@media (forced-colors: active) {
+    .btn {
+        border: 2px solid currentColor;
+    }
+    
+    .service-card,
+    .region-card,
+    .faq-item {
+        border: 1px solid currentColor;
+    }
+}
