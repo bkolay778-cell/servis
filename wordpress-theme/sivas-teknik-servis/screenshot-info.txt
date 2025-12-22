@@ -1,0 +1,23 @@
+/**
+ * WordPress Theme Screenshot Placeholder
+ * 
+ * Actual screenshot.png should be 1200x900 pixels
+ * This file describes what the screenshot should contain:
+ * 
+ * - Theme name: Sivas Teknik Servis Arıza Kayıt Merkezi
+ * - Color scheme: Blue (#1e40af) with white/gray
+ * - Green CTA buttons (#16a34a)
+ * - Professional, modern design
+ * - Mobile-responsive layout preview
+ * - Hero section with service icons
+ * - Contact buttons visible
+ */
+
+/* Screenshot should show:
+   1. Header with logo and navigation
+   2. Hero section with blue gradient background
+   3. Service cards section
+   4. How it works steps
+   5. Fixed mobile call/WhatsApp buttons
+   6. Footer with disclaimer
+*/
