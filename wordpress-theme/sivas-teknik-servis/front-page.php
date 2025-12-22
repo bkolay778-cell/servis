@@ -259,19 +259,27 @@ sts_faq_schema();
 </section>
 
 <!-- CTA Section -->
-<section class="section" style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%); color: white;">
-    <div class="container">
-        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
-            <h2 style="color: white; margin-bottom: 1rem;">Arıza Kaydınızı Hemen Oluşturun</h2>
-            <p style="opacity: 0.9; margin-bottom: 2rem;">
+<section class="section" style="position: relative; padding: 5rem 0;">
+    <!-- Background Image -->
+    <div style="position: absolute; inset: 0;">
+        <img src="https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=1920&h=600&fit=crop&q=80" 
+             alt="Teknik servis araçları"
+             style="width: 100%; height: 100%; object-fit: cover;">
+        <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(30,58,138,0.95), rgba(30,64,175,0.9));"></div>
+    </div>
+    
+    <div class="container" style="position: relative; z-index: 1;">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto; color: white;">
+            <h2 style="color: white; margin-bottom: 1rem; font-size: 2rem;">Arıza Kaydınızı Hemen Oluşturun</h2>
+            <p style="opacity: 0.9; margin-bottom: 2rem; font-size: 1.125rem;">
                 Cihazınızda bir arıza mı var? Hemen arıza kaydı oluşturun, 
                 teknik destek sürecinizi başlatalım.
             </p>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="<?php echo esc_url(home_url('/ariza-kaydi/')); ?>" class="btn btn-lg btn-cta">
+                <a href="<?php echo esc_url(home_url('/ariza-kaydi/')); ?>" class="btn btn-lg btn-cta" style="box-shadow: 0 10px 25px -5px rgba(22,163,74,0.4);">
                     Arıza Kaydı Oluştur
                 </a>
-                <a href="<?php echo esc_url($contact['whatsapp_link']); ?>" class="btn btn-lg" style="background: white; color: var(--primary-color);" target="_blank" rel="noopener">
+                <a href="<?php echo esc_url($contact['whatsapp_link']); ?>" class="btn btn-lg" style="background: white; color: var(--primary-color); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.2);" target="_blank" rel="noopener">
                     <?php echo sts_get_icon('whatsapp', 'btn-icon'); ?>
                     WhatsApp ile Ulaşın
                 </a>
